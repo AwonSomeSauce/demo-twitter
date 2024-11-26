@@ -22,6 +22,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Navbar -->
+    <header class="navbar">
+      <nav>
+        <ul>
+          <li><%= link_to "Home", "#" %></li>
+          <li><%= link_to "Help", "#" %></li>
+          <li><%= link_to "Log in", "#" %></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

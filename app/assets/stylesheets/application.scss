@@ -1,3 +1,7 @@
-// Import navbar styles
-@use "components/navbar";
+// Import component styles
 @use "components/container";
+@use "components/footer";
+@use "components/navbar";
+
+// Import page-specific styles
+@use "pages/home";

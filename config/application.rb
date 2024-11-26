@@ -23,5 +23,6 @@ module ToyApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.site_name = "Sleeqe"
   end
 end

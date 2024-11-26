@@ -1,9 +1,11 @@
-<header>
+<header class="home-header">
+  <%= link_to root_path do %>
+    <%= image_tag "logo.png", alt: "Logo", class: "logo" %>
+  <% end %>
   <h1>Welcome to Our Website!</h1>
 </header>
-<main>
-  <p>This is the home page. Explore our site to learn more about us and our services.</p>
+
+<main class="home-main">
+  <p>Explore our site to learn more about us and our services.</p>
+  <%= link_to "Sign Up Now", "#", class: "btn btn-primary" %>
 </main>
-<footer>
-  <p>&copy; <%= Time.current.year %> YourCompanyName</p>
-</footer>

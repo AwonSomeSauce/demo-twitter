@@ -2,6 +2,10 @@
 @use "components/container";
 @use "components/footer";
 @use "components/navbar";
+@use "components/signup_form";
+@use "components/error_messages";
+@use "components/flash_message";
 
 // Import page-specific styles
 @use "pages/home";
+@use "pages/user";

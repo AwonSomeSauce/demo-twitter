@@ -1,10 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<% provide(:title, @user.name) %>
 
-<%= render @user %>
-
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+<div class="user-profile">
+  <div class="profile-header">
+    <div class="profile-picture">
+      <%= gravatar_for @user, size: 150 %>
+    </div>
+    <div class="profile-info">
+      <h1 class="user-name"><%= @user.name %></h1>
+    </div>
+  </div>
+  <div class="profile-details">
+    <h2>About <%= @user.name %></h2>
+    <p>More user details can go here, such as bio, email, or other attributes. Customize as needed!</p>
+  </div>
 </div>

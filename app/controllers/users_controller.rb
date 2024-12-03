@@ -27,7 +27,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html {
           redirect_to @user,
-          notice: "User was successfully created."
+          notice: "Welcome to Dwitter!"
         }
         format.json { render :show, status: :created, location: @user }
       else
@@ -75,6 +75,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.expect(user: [ :name, :email ])
+      params.expect(user: [ :name, :email, :password, :password_confirmation ])
     end
 end

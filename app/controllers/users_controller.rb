@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include SessionsHelper
   before_action :set_user, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
@@ -25,6 +26,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        reset_session
+        log_in @user
         format.html {
           redirect_to @user,
           notice: "Welcome to Dwitter!"

@@ -1,0 +1,7 @@
+ahmed:
+  id: 1
+  name: Ahmed Musa Awon
+  email: ahmed@example.com
+  password_digest: <%= BCrypt::Password.create('password') %>
+  created_at: <%= Time.zone.now %>
+  updated_at: <%= Time.zone.now %>

@@ -14,6 +14,8 @@
       gap: 1rem;
 
       li {
+        position: relative; /* For dropdown positioning */
+        
         a {
           text-decoration: none;
           color: #fff;
@@ -22,6 +24,41 @@
 
           &:hover {
             color: #ddd;
+          }
+        }
+
+        &.dropdown {
+          .dropdown-toggle {
+            cursor: pointer;
+          }
+
+          .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            list-style: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+            li {
+              margin: 0;
+              padding: 0.2rem 0;
+
+              a {
+                color: #fff;
+
+                &:hover {
+                  color: #ddd;
+                }
+              }
+            }
+
+            &.active {
+              display: block;
+            }
           }
         }
       }

@@ -1,12 +1,34 @@
-<% content_for :title, "Editing user" %>
+<% provide(:title, 'Edit Profile') %>
 
-<h1>Editing user</h1>
+<div class="signup-form-container">
+  <h1>Edit Profile</h1>
+  <p>Update your account information below.</p>
 
-<%= render "form", user: @user %>
+  <%= form_with(model: @user) do |f| %>
+    <%= render 'shared/error_messages' %>
 
-<br>
+    <div class="form-group">
+      <%= f.label :name, "Full Name" %>
+      <%= f.text_field :name, class: "form-control", placeholder: "Update your full name" %>
+    </div>
 
-<div>
-  <%= link_to "Show this user", @user %> |
-  <%= link_to "Back to users", users_path %>
+    <div class="form-group">
+      <%= f.label :email, "Email Address" %>
+      <%= f.email_field :email, class: "form-control", placeholder: "Update your email" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password, "New Password" %>
+      <%= f.password_field :password, class: "form-control", placeholder: "Enter a new password (optional)" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation, "Confirm New Password" %>
+      <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Re-enter the new password" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Save Changes", class: "btn btn-primary" %>
+    </div>
+  <% end %>
 </div>
